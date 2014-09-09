@@ -1,0 +1,76 @@
+{% extends 'home/base.html' %}
+{% block title %}::.Indice Materias O&M.::{% endblock %}
+{% block content %}
+
+<br><br>
+<div class="container">
+    <div class="col-sm-4 col-md-4">
+        <div class="post">
+            <div class="post-img-content">
+                <img src="../../media/images/capitulos/networking/networking.png"  class="img-responsive" />
+                    <span class="post-title"><b>Redes<p></b><br />
+                        <b></b></span>
+                </div>
+                <div class="content">
+                    <div class="author">
+                        Prof.: <b>Kennedy Sanchez</b> |
+                        <time datetime="2014">2014</time>
+                    </div>
+                    <div align="justify">
+                        Una red de computadoras, también llamada red de ordenadores, red de comunicaciones de datos o red informática, es un conjunto de equipos informáticos y software conectados entre sí por medio de dispositivos físicos que envían y reciben impulsos eléctricos, ondas electromagnéticas o cualquier otro medio para el transporte de datos, con la finalidad de compartir información, recursos y ofrecer servicios.
+                        <p><center><a href="http://ocw.uoc.edu/computer-science-technology-and-multimedia/computer-networks/computer-networks/XP06_M2105_01496.pdf" target="_blank" alt="Redes">http://ocw.uoc.edu</a></center></p>
+                    </div>
+                    <div>
+                        <center><a href="#" class="btn btn-warning btn-sm">Indice</a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div class="post">
+                <div class="post-img-content">
+                    <img src="../../media/images/capitulos/networking/nos/nos.png" class="img-responsive" />
+                    <span class="post-title"><b>Sistema Operativo II<p></b><br />
+                        <b></b></span>
+                </div>
+                <div class="content">
+                    <div class="author">
+                        Prof.: <b>Kennedy Sanchez</b> |
+                        <time datetime="2014">2014</time>
+                    </div>
+                    <div align="justify">
+                        Un sistema operativo de red, también llamado NOS (del inglés, Network Operating System), es un software que permite la interconexión de ordenadores para poder acceder a los servicios y recursos, hardware y software, creando redes de computadoras.
+                        <p><center><a href="http://personals.ac.upc.edu/elara/documentacion/WSERVER%20-%20UD1%20-%20Introduccion%20SO%20en%20red.pdf" target="_blank" alt="NOS">http://personals.ac.upc.edu</a></center></p>
+
+                    </div>
+                    <div>
+                        <center><a href="/temas/" class="btn btn-primary btn-sm">Indice</a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div class="post">
+                <div class="post-img-content">
+                    <img src="../../media/images/capitulos/virtualizacion/virtualizacion.png" class="img-responsive" />
+                    <span class="post-title"><b>Virtualizacion<p></b><br />
+                        <b></b></span>
+                </div>
+                <div class="content">
+                    <div class="author">
+                        Prof.: <b>Kennedy Sanchez</b> |
+                        <time datetime="2014">2014</time>
+                    </div>
+                    <div align="justify">
+                        La virtualización hace posible que en los ordenadores actuales se puedan ejecutar varios sistemas operativos y aplicaciones, de forma que la infraestructura sea más sencilla y eficiente. Las aplicaciones se implementan más rápido, el rendimiento y la disponibilidad mejoran y las operaciones se automatizan, con la consiguiente simplificación de la infraestructura de TI, que es más fácil de implementar y menos costosa de adquirir y gestionar.
+                        <p><center><a href="http://www.vmware.com/es/virtualization#sthash.OvCpkJ3p.dpuf" target="_blank" alt="Virtualizacion">http://www.vmware.com/es</a></center></p>
+                    </div>
+                    <div>
+                        <center><a href="#" class="btn btn-success btn-sm">Indice</a></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

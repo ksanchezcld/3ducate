@@ -1,0 +1,17 @@
+from django.conf.urls import patterns,url
+from registro_estudiantes_oym.apps.home.views import RegistrarEstudiante
+
+urlpatterns = patterns('registro_estudiantes_oym.apps.home.views',
+	url(r'^$','index_view',name='vista_principal'),
+	url(r'^login/$','login_view'),
+	url(r'^logout/$','logout_view'),
+	url(r'^reg_estudiantes/$',RegistrarEstudiante.as_view(),name='vista_reg_estudiante'),
+	url(r'^registrados/$','registrados_view',name='vista_registrados'),
+	url(r'^certificados/$','cert_gallery_view',name='vista_certificados'),
+	url(r'^audiovisuales/$','audiovisuales_view',name='vista_audiovisuales'),
+	url(r'^temas/$','capitulos_temas_view',name='vista_temas'),
+	url(r'^reporte/$','rep_calificaciones_view',name='vista_calificaciones'),
+	url(r'^biblioteca/$','biblioteca_view',name='vista_biblioteca'),
+	url(r'^sugerencias/$','sugerencias_view',name='vista_sugerencias'),
+	url(r'^about/$','about_view',name='vista_about'),
+	)

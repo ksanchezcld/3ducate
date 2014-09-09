@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+  
+  <link href="../../media/css/3-col-portfolio.css" rel="stylesheet"></head><body>
+{% extends 'home/base.html'%} {% block title %}::.Sistema Universidad
+O&amp;M.::{% endblock %} {% block content %}
+<div id="materia"><big><span style="font-weight: bold;">
+<h1><b>{{Materia.descripcion_materia}}</b></h1>
+<hr> </span></big> </div>
+
+<table width="100%">
+  <tbody>
+    <tr>
+      <td colspan="2">
+      <div style="text-align: center;"><big> AQUI! &gt;&gt;</big>
+      <p><big> <b>{{texto.as_p}}</b></big></p>
+      <p><big> <big><big><small>Los temas que seran tratados en este
+apartado son exclusivamente de la materia <br>
+de Sistemas Operativos II. Este es un programa de ensenanza en linea
+que <br>
+esta formado por videotutoriales, libros digitales, examenes digitales,
+y muchos <br>
+recursos mas a disposicion del estudiantado de la Universidad O&amp;M.</small></big></big><br>
+      </big></p>
+      <small>Los temas que seran tratados en este apartado son
+exclusivamente de la materia <br>
+de Sistemas Operativos II. Este es un programa de ensenanza en linea
+que <br>
+esta formado por videotutoriales, libros digitales, examenes digitales,
+y muchos <br>
+recursos mas a disposicion del estudiantado de la Universidad O&amp;M. </small><br>
+      </div>
+      </td>
+      <td width="200">
+      <div id="panel-derecho" class="btn"><a href="login/"> <button class="btn-info">Ingresar al Curso</button></a>
+      <p> <br>
+{% for seccion in Seccion %} <b>Seccion:
+{{seccion.descripcion_seccion}}</b></p>
+      <p> {% endfor %} {% for periodo in Periodo %} <b>Periodo:
+{{periodo.fdesde}}/{{periodo.fhasta}}</b></p>
+      <p> {% endfor %} {% for nom_prof in nom_prof%} <b>{{perfil_maestro.nom_prof}}</b>
+{%endfor%} </p>
+      <div class="col-md-4 portfolio-item"> <a href="about/"> <img class="img-circle" src="../../media/images/usuarios/ksanchez.jpg" height="90" width="100"></a>
+      <p> </p>
+      <p> </p>
+      <h3><span class="label label-danger">Instructor</span></h3>
+      <p><br><br>
+      <b>Contactos</b><br>
+      <a href="http://do.linkedin.com/pub/dir/Kennedy/Sanchez" target="_blank"> <img style="width: 47px; height: 47px;" alt="linkedin" src="../../media/images/redes/linkedin/LinkedIn.jpeg"></a><a href="http://www.twitter.com/" target="_blank"><img style="width: 47px; height: 47px;" alt="twitter" src="../../media/images/redes/twitter/twitter.jpeg"></a><br>
+      <a href="https://www.youtube.com/channel/UCYXR6jyFsPyK0IW9d13U8bQ" target="_blank"> <img style="width: 47px; height: 47px;" alt="youtube" src="../../media/images/redes/google/youtube/youtube_logo-lg.png"></a><a href="http://dev4sec.blogspot.com/" target="_blank"> <img style="width: 47px; height: 47px;" alt="blogger" src="../../media/images/redes/google/blogger/Blogger_logo.png"></a><br>
+      <img style="width: 47px; height: 47px;" alt="gmail" src="../../media/images/redes/google/gmail/gmailenvelop.jpg"><img style="width: 47px; height: 47px;" alt="hotmail" src="../../media/images/redes/Microsoft/Wlhlogo.png"><br>
+      </p><div>&nbsp; <br>
+		</div>
+      </div>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endblock%}
+</body></html>

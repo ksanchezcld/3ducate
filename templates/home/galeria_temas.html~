@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>::.Galeria temas de clases sistema operativo II.::</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- Stylesheets -->
+		<link rel="stylesheet" href="../../media/bootstrap/css/bootstrap.css">
+<!-- Reference to html5gallery.js -->
+<script type="text/javascript" src="../../media/html5gallery/html5gallery.js"></script>
+
+</head>
+
+<body>
+
+<!-- A wrapper DIV to center the Gallery -->
+<div style="text-align:center;">
+
+    <!-- Define the Div for Gallery -->
+    <!-- 1. Add class html5gallery to the Div -->
+    <!-- 2. Define parameters with HTML5 data tags -->
+	<div style="display:none;margin:0 auto;" class="html5gallery" data-skin="gallery" data-width="480" data-height="272" data-resizemode="fill">
+	
+	    <!-- Add images to Gallery -->
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/1-nutserverintall.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/win2008.jpeg"  alt="Instalacion Servidor Windows 2008"></a>
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/2-join.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/windowsxp2.jpeg" alt="Ingresar Dominio Windows XP"></a>
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/2-vistajoin.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/windowsvista.jpeg" alt="Ingresar Windows Vista Dominio"></a>
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/2-win8join.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/win8.jpeg" alt="Ingresar Windows8 Dominio"></a>
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/3-ntfs.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/ntfs.jpeg" alt="Permisos NTFS XP"></a>
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/3-vistantfs.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/ntfs.jpeg" alt="Permisos NTFS Vista"></a>
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/3-win7ntfs.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/ntfs.jpeg" alt="Permisos NTFS Windows7"></a>
+      <a href="../../media/recursos/video_topic/infraestructura_windows/windows/4-win7sharefile.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/sharing.jpeg" alt="Compartir carpeta Windows7"></a>
+      <a href="../../media/recursos/video_topic/infraestructura_windows/windows/5-vistashare.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/sharing2.jpeg" alt="Compartir carpeta Windows Vista"></a>		
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/4-win8filesharing2.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/sharing.jpeg" alt="Compartir carpeta Windows8"></a>
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/8-vistaprinter.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/sharedprinter.jpg" alt="Compartir Impresora Windows Vista"></a>
+		<a href="../../media/recursos/video_topic/infraestructura_windows/windows/7-nutinstallad.mp4"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/ad.jpeg" alt="Instalar Active Directory"></a>
+	
+		<!-- Add videos to Gallery -->
+		<!-- Big Buck Bunny Copyright 2008, Blender Foundation http://www.bigbuckbunny.org 
+		<a href="images/Big_Buck_Bunny.mp4" data-webm="images/Big_Buck_Bunny.webm"><img src="images/Big_Buck_Bunny.jpg" alt="Big Buck Bunny, Copyright Blender Foundation"></a>
+		-->
+		<!-- Add Youtube video to Gallery 
+		<a href="http://www.youtube.com/embed/YE7VzlLtp-4"><img src="http://img.youtube.com/vi/YE7VzlLtp-4/2.jpg" alt="Youtube Video"></a>
+		
+		<!-- Add Vimeo video to Gallery 
+		<a href="HTTP://www.vimeo.com/1-nutserverintall.mp4"><img src="images/Big_Buck_Bunny.jpg" alt="Vimeo Video"></a>
+		-->
+	</div>
+
+</div>
+<center><a href="javascript:window.history.go(-1);" class="btn btn-primary ">Regresar</a></center>
+<style type="text/css">
+div.guide {margin:12px 24px;}
+div.guide span {color:#ff0000; font:italic 14px Arial, Helvetica, sans-serif;}
+div.guide p {color:#000000; font:14px Arial, Helvetica, sans-serif;}
+div.guide pre {color:#990000;}
+div.guide p.title {color:#df501f; font:18px Arial, Helvetica, sans-serif;}
+</style>
+</body>
+
+</html>

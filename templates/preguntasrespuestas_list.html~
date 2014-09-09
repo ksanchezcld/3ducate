@@ -1,0 +1,8 @@
+{% extends "listado.html" %}
+
+{% block contenido %}
+
+    <div class="wrapper">
+        
+        <h1>Listado Preguntas Frecuentes con Respuestas</h1>
+

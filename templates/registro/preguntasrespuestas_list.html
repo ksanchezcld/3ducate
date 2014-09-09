@@ -1,0 +1,13 @@
+{% extends "listado.html" %}
+
+{% block contenido %}
+
+    <div class="wrapper">
+        <h1>Listado Preguntas Frecuentes con Respuestas</h1>
+          {% for faq in preguntasresp%}
+	    <p><b>{{ faq.id }}-{{ faq.pregunta }}</b></p>
+	    <p> {{ faq.respuesta }} </p>
+            <p>{{ faq.estudiante.nombre }}{{ faq.estudiante.apellido }}({{ faq.estudiante.fechareg}})</p>
+	  {% endfor %}
+{% endblock %}
+

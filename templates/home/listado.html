@@ -1,0 +1,20 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Template Tags</title>
+
+    <!--COMO DEBE IR
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}" />
+    <link rel="stylesheet" href="{% static "css/base.css" %}" /> !-->
+    <link rel="stylesheet" href="../media/css/normalize.css">
+    <link rel="stylesheet" href="../media/css/base.css">
+</head>
+<body>
+
+    {% block contenido %}
+    {% endblock %}
+
+</body>
+</html>

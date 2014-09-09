@@ -1,0 +1,157 @@
+{% extends 'home/base.html' %}
+{% block title %}::..Sistema Universidad OYM.::{% endblock %}
+
+{% block content %}
+
+	<div class="title">
+		{% for materia in materia %}
+			<h2>{{materia.descripcion}}</h2>
+    {% endfor %}
+	</div>
+
+	<div class="panel-principal">
+		<div class="panel-izquierdo">
+			<div class="po-markup">
+				<a href="../../media/recursos/books/SO_Modernos_Andrew_Tanembaum_3era_Ed.pdf" target="_blank" class="po-link">Ebook</a>
+
+				<div class="po-content hidden">
+					<div class="po-title">
+						<img src="../../media/images/libros/portada/front/nos/Sistemas_oper_Modernos_3ra_ed.jpg" alt="SO. Modernos">
+					</div>
+					<div class="po-body">
+
+    <!--CARGAR TODOS LOS DATOS DINAMICAMENTE CON DB RESPONSES {{..}}!-->
+
+						 <strong>
+						 	Sistemas Operativos Modernos.                 
+                  			3ra. Edicion, Andrew Tanenbaum
+                  			ISBN: 978-607-442-046-3
+                  			PEARSON EDUCACIÓN, México, 2009
+                  			<p>1,049 Paginas.</p>
+                  		 </strong>
+					</div>
+				</div>
+			</div>
+			<figure class="portadas">
+    <!--CARGAR TODOS LOS DATOS DINAMICAMENTE CON DB RESPONSES {{..}}!-->
+				<a href="../../media/images/libros/portada/front/nos/Sistemas_oper_Modernos_3ra_ed.jpg" class="img-rounded" data-lightbox="roadtrip" rel="lightbox">
+					<img src="../../media/images/libros/portada/front/nos/Sistemas_oper_Modernos_3ra_ed.jpg" alt="SO. Modernos"/></a>
+			</figure>
+
+			<div class="po-markup">
+				<a href="../../media/recursos/books/Redes_de_Computadoras_4ta_Ed_Tanenbaum.pdf" target="_blank" class="po-link">Ebook</a>
+
+				<div class="po-content hidden">
+					<div class="po-title">
+						<img src="../../media/images/libros/portada/front/networking/Redes_Computadoras_4ta_ed_Andrew_Tanenbaum.jpg" alt="SO. Modernos">
+					</div>
+					<div class="po-body">
+
+    <!--CARGAR TODOS LOS DATOS DINAMICAMENTE CON DB RESPONSES {{..}}!-->
+
+						 <strong>
+						 	Redes de Computadoras.
+                      		4ta. Edicion, Andrew Tanenbaum
+                            ISBN: 970-26-0162-2
+                            PEARSON EDUCACIÓN, México, 2003
+                            <p>869 Paginas.</p>
+                         </strong>
+					</div>
+				</div>
+			</div>
+			<figure class="portadas">
+    <!--CARGAR TODOS LOS DATOS DINAMICAMENTE CON DB RESPONSES {{..}}!-->
+				<a href="../../media/images/libros/portada/front/networking/Redes_Computadoras_4ta_ed_Andrew_Tanenbaum.jpg" class="img-rounded" data-lightbox="roadtrip" rel="lightbox">
+					<img src="../../media/images/libros/portada/front/networking/Redes_Computadoras_4ta_ed_Andrew_Tanenbaum.jpg" alt="Redes de Computadoras"></img></a>
+			</figure>
+		</div>
+			
+		<div class="panel-central">
+			<div class="texto-principal">
+			{% for texto in texto %}
+				{% if texto.status %}
+					{{texto}}
+				{% endif %}
+			{% endfor %}
+		 
+		  <div class="iframe">
+     		<iframe src="../../media/recursos/Sistema_Estudiantes_OYM.og v" frameborder="0" allowfullscreen></iframe>
+		         <!-- ENLACE DEL VIDEO A YOUTUBE //www.youtube.com/embed/0RbOW4oNZyU !-->
+		    </div>
+		  </div> 
+		</div>
+		
+		<div class="panel-derecho">
+			<div class="btn btn-primary btn-large right">
+				<a href="/login/">
+					<h4>Ingresar al Curso >></h4></a>
+			</div>
+			<div class="avatar right">
+				{% for seccion in seccion %}
+					<strong>Seccion: {{seccion.num_seccion}}</strong>
+				{% endfor %}
+
+				{% for periodo in periodo %}
+					<strong>Periodo: {{periodo.fdesde|capfirst}}/{{periodo.fhasta|capfirst}}</strong>
+				{% endfor %}
+
+				{% for nom_prof in nom_prof %}
+					<strong>{{nom_prof.nombre|capfirst}} {{nom_prof.apellido|capfirst}}</strong>
+				{% endfor %}
+
+					<figure class="foto">
+						<a href="/about/">
+
+	<!-- HACER EL LINK FOTO DINAMICO!-->
+							<img class="img-circle circle" src="../../media/images/usuarios/ksanchez.jpg" alt="foto"/>
+						</a>
+					</figure>
+				<span class="label label-success">Instructor</span>
+			</div>
+	<!-- HACER REDES SOCIALES FOTO DINAMICO!-->
+			<div class="contacto">
+				<strong><h3>Redes Sociales</h3></strong><p>
+
+	<!--CARGAR TODOS LOS DATOS DINAMICAMENTE CON DB RESPONSES {{..}}!-->
+				<a href="http://do.linkedin.com/pub/dir/Kennedy/Sanchez" target="_blank">
+					<img src="../../media/images/redes/linkedin/LinkedIn.jpeg" alt="Linkdin"/>
+				</a>
+				
+				<a href="http://www.twitter.com/" target="_blank">
+					<img src="../../media/images/redes/twitter/twitter.jpeg" alt="twitter">
+				</a>
+				
+				<a href="https://www.youtube.com/channel/UCYXR6jyFsPyK0IW9d13U8bQ" target="_blank">
+					<img src="../../media/images/redes/google/youtube/youtube_logo-lg.png" alt="Youtube">
+				</a><p>
+
+				<a href="http://dev4sec.blogspot.com/" target="_blank">
+					<img src="../../media/images/redes/google/blogger/Blogger_logo.png" alt="Blogger">
+				</a>
+
+				<a href="//mail.google.com" target="_blank">
+					<img src="../../media/images/redes/google/gmail/gmailenvelop.jpg" alt="Gmail">
+				</a>
+
+				<a href="//blu173.mail.live.com">
+					<img src="../../media/images/redes/Microsoft/Wlhlogo.png" alt="Hotmail">
+				</a>
+			</div>
+		</div>
+		<div class="calendario">
+			
+<!--CARGAR TODOS LOS DATOS DINAMICAMENTE CON DB RESPONSES!-->
+			<span>Martes: 8:00-10:00pm</span>
+			<span>Miercoles: 7:00-8:00pm</span>
+			<span>{{hora}}</span>
+		</div>
+
+		<div class="aviso">
+			{% if aviso %}
+				{% for aviso in aviso %}
+					{% if aviso.status %} {{aviso|upper}} {% endif %}
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

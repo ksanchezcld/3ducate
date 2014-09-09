@@ -1,0 +1,217 @@
+  <!-- Stylesheets -->
+  
+  {% extends 'home/base.html' %}
+  
+  {% block title%}::.Reporte Estudiantes O&M.::{% endblock %}
+
+  {% block content %}
+<link rel="stylesheet" href="../../media/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="../../media/static/css/background_color.css">
+<div class="btn-toolbar"><a href="/reg_estudiantes/"><button class="btn btn-primary">Nuevo Usuario</button></a></div>
+<br>
+
+<div class="well">
+<table class="table">
+  <thead> 
+    <tr>
+      <th>Matricula</th>
+      <th>Nombres</th>
+      <th>Asistencia</th>
+      <th>Practica</th>
+      <th>Parcial</th>
+      <th>Final</th>
+      <th>Acumulado</th>
+      <th style="width: 36px;"><br>
+    </th>
+   </tr>
+  </thead> 
+  <tbody>
+    {% for calificacion in calificacion %}
+    <tr>
+      <td>{{calificacion.estudiante.matricula}}</td>
+      <td>{{calificacion.estudiante.nombre}}</td>
+      <td>{{calificacion.asistencia}}</td>
+      <td>{{calificacion.practica}}</td>
+      <td>{{calificacion.parcial}}</td>
+      <td>{{calificacion.final}}</td>
+      <td>100 CAMPO CALCULADO</td>
+      <td> <br>
+      </td>
+    </tr>
+    {% endfor %}
+     </tbody>
+ </table>
+</div>
+  <div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Confirmacion de eliminar</h3>
+     </div>
+
+    <div class="modal-body">
+      <p class="error-text">Esta seguro que desea eliminar este usuario?</p>
+    </div>
+
+    <div class="modal-footer"> 
+     <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button> 
+     <button class="btn btn-danger" data-dismiss="modal">Eliminar</button>
+    </div>  
+  </div>
+
+<div style="text-align: left;">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+<div class="promedio">
+  <table class="tpromedio" border="2" cellpadding="0" cellspacing="0" width="10%">
+  <thead> 
+    <tr>      
+      <th bgcolor="#4c4c4c"><font color="white">Asistencia</font><th>
+      <th bgcolor="#4c4c4c"><font color="white">Practica</font><th>
+      <th bgcolor="#4c4c4c"><font color="white">Parcial</font><th>
+      <th bgcolor="#4c4c4c"><font color="white">Final</font><th>
+    </tr>
+  </thead>
+ <tbody>
+    <tr>
+      {% for key,asis in prom_asis.items %}
+        <td>
+        {% if asis <= 4.9 %} 
+            <font color="red">
+            <b>{{asis}}</b></font>
+        {% else %}
+            {{asis}}
+        {% endif %}
+      {% endfor %}</td>
+      <!--
+      {% for key,prct in prom_prct.items %}
+      <td>
+        {% if prct <= 9.9 %}
+            <font color="red">
+            <b>{{prct}}<b></font>
+        {% else %}
+            {{prct}}
+        {% endif %}
+    {% endfor %}</td>
+!-->
+    {% for key,prcl in prom_prcl.items %}
+    <td>
+      {% if prcl <= 9.9 %}
+           <font color="red">
+           <b>{{prcl}}</b></font>
+      {% else %}
+          {{prcl}}
+      {% endif %}
+    {% endfor %}
+    </td>
+    {% for key,fnl in prom_fnl.items %}
+      <td>
+      {% if fnl <= 49.9 %}
+          <font color="red">
+          <b>{{fnl}}</b></font>
+      {% else %}
+          {{fnl}}
+      {% endif %}
+    {% endfor %}
+    </td>
+   </tr>
+ </tbody>
+</table>
+</div>
+<span style="font-weight: bold;">Total Inscritos</span>: {{conteo_std}}</th><br>
+<span style="font-weight: bold;">Nota Maxima</span>: 95<br>
+<span style="font-weight: bold;">Nota Minima</span>: 63<br>
+<!--
+      <span style="font-weight: bold;">PROMEDIOS</span><br>
+      {% for key,asis in prom_asis.items %}
+    <th><span style="font-weight: bold;">Asistencia</span>
+  {% if asis <= 5 %} 
+    <font color="red">
+    <b>{{asis}}</b><br></font>
+  {% else %}
+       {{asis}}
+  {% endif %}
+{% endfor %}
+</th>
+{% for key,prct in prom_prct.items %}
+    <th><span style="font-weight: bold;">Practica</span>
+    {% if prct <= 10 %}
+      <font color="red">
+      <b>{{prct}}<b><br></font>
+    {% else %}
+      {{prct}}<br>
+    {% endif %}
+{% endfor %}
+</th>
+{% for key,prcl in prom_prcl.items %}
+  <th><span style="font-weight: bold;">Parcial</span>
+  {% if prcl <= 10 %}
+      <font color="red">
+      <b>{{prcl}}</b><br></font>
+  {% else %}
+      {{prcl}}<br>
+  {% endif %}
+{% endfor %}
+</th>
+{% for key,fnl in prom_fnl.items %}
+  <th><span style="font-weight: bold;">Final</span>
+  {% if fnl <= 50 %}
+    <font color="red">
+    <b>{{fnl}}</b><br></font>
+  {% else %}
+    {{fnl}}<br>
+  {% endif %}
+{% endfor %}
+    </th>
+   </span> 
+  </tr>
+ </td>
+</table><br>
+
+<span style="font-weight: bold;">Total Inscritos</span>: {{conteo_std}}</th><br>
+<span style="font-weight: bold;">Nota Maxima</span>: 95<br>
+<span style="font-weight: bold;">Nota Minima</span>: 63<br>
+!-->
+ <center>
+  <div id="botones">
+  <button class="btn">Importar</button>
+  <button class="btn">Exportar PDF</button>
+  <button class="btn">Exportar Excel</button>
+  <button class="btn">Exportar CSV</button>
+  <button class="btn">Imprimir</button>
+</div>
+ <br>
+  <div class="pagination">
+    <ul>
+     <li><a href="#">Prev</a></li>
+     <li><a href="#">1</a></li>
+     <li><a href="#">2</a></li>
+     <li><a href="#">3</a></li>
+     <li><a href="#">4</a></li>
+     <li><a href="#">Next</a></li>
+    </ul>
+   </div>
+ </center>
+ {% endblock %}
+    <!-- JavaScript -->
+    <script src="../../media/js/jquery-1.10.2_cert.js"></script>
+    <script src="../../media/js/bootstrap_cert.js"></script>
+    <script src="../../media/js/jquery.js"></script>
+    <script src="../../../media/bootstrap/round-about/js/jquery-1.10.2.js"></script>
+    <script src="../../../media/bootstrap/round-about/js/bootstrap.js"></script>
+

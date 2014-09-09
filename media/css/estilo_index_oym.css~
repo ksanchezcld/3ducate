@@ -1,0 +1,13 @@
+#main { width:100%; } 
+
+.panel-izquierdo { background-color:#ADD2EC; padding:2px; margin-right:5px; width:300px; float:left; } 
+
+.panel-central { background-color:#ADD2EC; padding:2px; margin-right:5px; width:800px; float:left; } 
+
+.panel-derecho { background-color:#ADD2EC; padding:2px; margin-right:5px; width:300px; float:left; } 
+
+.sponsors { background-color:#245AA4;} 
+
+.logo { background-color:#FFFFFF; padding:2px; margin-right:5px; width:300px;}
+
+

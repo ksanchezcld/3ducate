@@ -1,0 +1,105 @@
+    {% extends 'home/base.html' %}
+
+    {% block title %}::.Certificaciones.::{% endblock %}
+    
+    {% block content%}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Certificaciones... <small>Portafolio.</small>
+          </h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 portfolio-item"> <a href="#project-link">
+            <img class="img-responsive" src="../../media/images/certificados/security+.png"> </a>
+          <h3><a href="#project-link">Security+ Certified</a> </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam viverra euismod odio, gravida pellentesque urna varius
+            vitae.</p>
+        </div>
+        <div class="col-md-4 portfolio-item"> <a href="#project-link">
+            <img class="img-responsive" src="../../media/images/certificados/security+module1.png">
+          </a>
+          <h3><a href="#project-link">Security+ Modulo1</a> </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam viverra euismod odio, gravida pellentesque urna varius
+            vitae.</p>
+        </div>
+        <div class="col-md-4 portfolio-item"> <a href="#project-link">
+            <img class="img-responsive" src="../../media/images/certificados/nos.png"> </a>
+          <h3><a href="#project-link">Network Operating System</a> </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam viverra euismod odio, gravida pellentesque urna varius
+            vitae.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 portfolio-item"> <a href="#project-link">
+            <img class="img-responsive" src="../../media/images/certificados/hp.png"> </a>
+          <h3><a href="#project-link">HP Open View</a> </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam viverra euismod odio, gravida pellentesque urna varius
+            vitae.</p>
+        </div>
+        <div class="col-md-4 portfolio-item"> <a href="#project-link">
+            <img class="img-responsive" src="../../media/images/certificados/linux_basico.png"> </a>
+          <h3><a href="#project-link">Linux Basico</a> </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam viverra euismod odio, gravida pellentesque urna varius
+            vitae.</p>
+        </div>
+        <div class="col-md-4 portfolio-item"> <a href="#project-link">
+            <img class="img-responsive" src="../../media/images/certificados/controles_seguridad.png">
+          </a>
+          <h3><a href="#project-link">Controles Seguridad Informatica</a>
+          </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam viverra euismod odio, gravida pellentesque urna varius
+            vitae.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 portfolio-item"> <a href="#project-link">
+            <img class="img-responsive" src="../../media/images/certificados/veritas.png"> </a>
+          <h3><a href="#project-link">Veritas Backup Exec</a> </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam viverra euismod odio, gravida pellentesque urna varius
+            vitae.</p>
+        </div>
+        <div class="col-md-4 portfolio-item"> <a href="#project-link">
+            <img class="img-responsive" src="../../media/images/certificados/nlc.png"> </a>
+          <h3><a href="#project-link">Natural Learning English</a> </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam viverra euismod odio, gravida pellentesque urna varius
+            vitae.</p>
+        </div>
+        <div class="col-md-4 portfolio-item"> <a href="#project-link">
+            <img class="img-responsive" src="../../media/images/certificados/nlc.png"> </a>
+          <h3><a href="#project-link">Project Name</a> </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Nam viverra euismod odio, gravida pellentesque urna varius
+            vitae.</p>
+        </div>
+      </div>
+      <center><a href="http://do.linkedin.com/pub/kennedy-sanchez/31/315/1b1">Linkedin</a></center>
+      <hr>
+      <div class="row text-center">
+        <div class="col-lg-12">
+          <ul class="pagination">
+            <li><a href="#">«</a> </li>
+            <li class="active"><a href="#">1</a> </li>
+            <li><a href="#">2</a> </li>
+            <li><a href="#">3</a> </li>
+            <li><a href="#">4</a> </li>
+            <li><a href="#">5</a> </li>
+            <li><a href="#">»</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+     {% endblock%}   
+    <!-- JavaScript -->
+    <script src="../../media/js/jquery-1.10.2_cert.js"></script>
+    <script src="../../media/js/bootstrap_cert.js"></script>

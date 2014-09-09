@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="../../media/bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" href="../../media/bootstrap/css/bootstrap-responsive.css">
+		<link rel="stylesheet" href="../../media/bootstrap/css/timeline.css">
+		<script src="../../media/js/jquery.js"></script>
+		<script src="../../media/bootstrap/js/bootstrap.js"></script>
+<body>
+<div style="text-align: center"><img src="file:///media/02a8b256-a208-403c-b672-ec16719a571e_/Ksanchez_Datafile/Dropbox/PROGRAMACION/Python_Y_Django/DJANGO/PROYECTOS/O&M_V2/registro_estudiantes_oym/registro_estudiantes_oym/media/images/logo/logo.jpg" alt=""></div>
+<div class="btn-toolbar">
+    <button class="btn btn-primary">Nuevo Usuario</button>
+</div>
+<div class="well">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Matricula</th>
+          <th>Nombres</th>
+          <th>Asistencia</th>
+          <th>Practica</th>
+			 <th>Parcial</th>
+			 <th>Final</th>
+			 <th>Acumulado</th>
+          <th style="width: 36px;"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>06-SIS2-1-009</td>
+          <td>Kennedy Sanchez</td>
+          <td>10</td>
+          <td>20</td>
+          <td>20</td>
+          <td>50</td>
+          <td>100</td>
+          <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>06-SIS2-1-009</td>
+          <td>Kennedy Sanchez</td>
+          <td>10</td>
+          <td>20</td>
+          <td>20</td>
+          <td>50</td>
+          <td>100</td>
+          <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>06-SIS2-1-009</td>
+          <td>Kennedy Sanchez</td>
+          <td>10</td>
+          <td>20</td>
+          <td>20</td>
+          <td>50</td>
+          <td>100</td>
+          <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>06-SIS2-1-009</td>
+          <td>Kennedy Sanchez</td>
+          <td>10</td>
+          <td>20</td>
+          <td>20</td>
+          <td>50</td>
+          <td>100</td>
+          <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>06-SIS2-1-009</td>
+          <td>Kennedy Sanchez</td>
+          <td>10</td>
+          <td>20</td>
+          <td>20</td>
+          <td>50</td>
+          <td>100</td>
+          <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>06-SIS2-1-009</td>
+          <td>Kennedy Sanchez</td>
+          <td>10</td>
+          <td>20</td>
+          <td>20</td>
+          <td>50</td>
+          <td>100</td>
+          <td>
+              <a href="user.html"><i class="icon-pencil"></i></a>
+              <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<div style="text-align: left">Total Inscritos: 18</div>
+<center>
+<button class="btn">Importar</button>
+<button class="btn">Exportar</button>
+<div class="pagination">
+    <ul>
+        <li><a href="#">Prev</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+</div>
+</center>
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Confirmacion de eliminar</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text">Esta seguro que desea eliminar este usuario?</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+        <button class="btn btn-danger" data-dismiss="modal">Eliminar</button>
+    </div>
+</div>
+ <!-- JavaScript -->
+    <script src="../../../media/bootstrap/round-about/js/jquery-1.10.2.js"></script>
+    <script src="../../../media/bootstrap/round-about/js/bootstrap.js"></script>
+</body>
+</html>

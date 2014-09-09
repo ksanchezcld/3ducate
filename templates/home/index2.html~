@@ -1,0 +1,26 @@
+<html> 
+  <head> 
+	<style> <!-- #main { width:100%; } .panel-izquierdo { background-color:#ADD2EC; padding:2px; margin-right:5px; width:300px; float:left; } .panel-central { background-color:#ADD2EC; padding:2px; margin-right:5px; width:800px; float:left; } .panel-derecho { background-color:#ADD2EC; padding:2px; margin-right:5px; width:300px; float:left; } --> 
+	</style> 
+  </head> 
+<body>
+
+<div id="main"> <div class="panel-izquierdo">Contenido de la primera columna<p>Contenido de la primera columna<p>Contenido de la primera columna<p>Contenido de la primera columna<p></div>
+
+<div class="panel-central" align="center"> 
+   <br><br><br>
+	    <big>Los temas que seran tratados en este apartado son<p>
+		exclusivamente de la materia de Sistemas Operativos II. 
+   		Este es un programa de ensenanza en linea que
+		esta formado por videotutoriales, libros, examenes digitales,y muchos 
+		recursos mas a disposicion del estudiantado de la Universidad O&amp;M. </big><p>
+	    <big>Los temas que seran tratados en este apartado son<p>
+		exclusivamente de la materia de Sistemas Operativos II. 
+	        Este es un programa de ensenanza en linea que
+		esta formado por videotutoriales, libros, examenes digitales,y muchos 
+		recursos mas a disposicion del estudiantado de la Universidad O&amp;M. </big><p>
+</div> 
+
+<div class="panel-derecho">Contenido de la tercera columna<p>Contenido de la tercera columna<p>Contenido de la tercera columna<p>Contenido de la tercera columna<p></div> </div> </body> </html>
+
+

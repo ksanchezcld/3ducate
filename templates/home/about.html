@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+
+
+	 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8"><!-- Stylesheets -->
+    
+    <link rel="stylesheet" href="../../media/static/bs3/css/bootstrap.css">
+    <!--<link rel="stylesheet" href="../../media/bootstrap/css/bootstrap-responsive.css"> !-->
+    
+
+    <style type="text/css">
+		  body{
+		  	padding-top: 60px;
+		  	padding-bottom: 40px;
+
+		  }
+		  .sidebar-nav{
+		  	padding: 9px 0;
+		  }
+		</style>
+    <script type="text/javascript">
+        $(document).on('ready',function(){
+              $.ajax({
+                  type:"GET",
+                  contentType:"application/json; charset=utf-8",
+                  dateType:"json",
+                  url:"/ws/servidores/",
+                  success:function(response){
+                          var i = (response.length-1)-9;
+                          for(i;i<=(response.length-1);i++){
+                              $('#ServidoresNuevos').append("<li>"+response[i].fields.hostname+"</li>"); 
+                              $('#time_reg').append("<li>"+response[i].fields.time_reg+"</li>");
+                         }    
+                  }
+              });
+        });
+    </script></head><body>
+    <div class="span12 well" align="center">
+<div style="text-align: center;">
+</div>
+<div>
+      </div>
+<center>
+<div style="text-align: center;"> <a href="about.html#aboutModal" data-toggle="modal"><img src="../../media/images/usuarios/ksanchez.jpg" name="aboutme" class="img-circle" height="140" width="140"></a></div>
+
+        <h3>Kennedy Sanchez</h3>
+        &nbsp; <a target="_blank" href="http://dev4sec.blogspot.com/">Blog
+
+          dev4sec</a> <br>
+        <a target="_blank" href="https://www.youtube.com/channel/UCYXR6jyFsPyK0IW9d13U8bQ">Canal
+
+          Youtube</a> <br>
+          <a target="_blank" href="https://github.com/login">Github</a> <br>
+        <br>
+        <a href="javascript:window.history.go(-1);" class="btn btn-primary">Regresar</a> </center>
+      <div class="modal hide" id="aboutModal">
+        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal">✕</button>
+          <h3>Acerca de...</h3>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+          <div class="row-fluid">
+            <div class="span10 offset1">
+              <div id="modalTab">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="about"> <img src="../../media/images/usuarios/ksanchez.jpg" name="aboutme" class="img-circle" border="0" height="140" width="140">
+                    <h3 class="media-heading">Kennedy Sanchez <small>
+                        Santo Domingo</small></h3>
+                    <span><strong>Conocimientos: </strong></span> <span class="label label-info">Security+ Certified</span>
+                    <span class="label label-info">Ps. Auditor Sistemas</span>
+                    <span class="label label-info">MGP</span>
+                    <p> <span class="label label-success">Programacion</span>
+                      <span class="label label-success">Redes</span> <span class="label label-success">Sevidores</span> <span class="label label-success">Virtualizacion</span> <span class="label label-success">Hacking Etico</span>
+                    </p>
+                    <div class="email">
+                    <b>ing-ksanchez@hotmail.com</b>
+                    </div>
+                    <hr>
+                    <center>
+                      <p class="text-left"><strong>Biografia: </strong><br>
+                        </p><p align="justify">Graduado de Ingeniero de Sistemas en la
+                        Universidad Central del Este (UCE), con Maestria
+                        en Gerencia y Productividad en la Universidad
+                        APEC, y Post grado de Auditoria de Sistemas en
+                        la Universidad O&amp;M. Certificado por Comptia en Security+.</p>
+                      <a href="http://do.linkedin.com/pub/kennedy-sanchez/31/315/1b1" target="_blank">Linkedin</a>,
+                      <a href="/certificados/" target="_blank">Certificaciones</a> <br>
+                    </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+            <script src="../../media/js/jquery.js"></script>
+            <script src="../../media/bootstrap/js/bootstrap.js"></script>
+  </body></html>

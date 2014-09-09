@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="../../media/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="../../media/bootstrap/css/bootstrap-responsive.css">
+
+{% extends 'home/base.html' %}  
+{% block title %}::.Registrar Estudiante.::{% endblock %}
+{% block content %}<br>
+<br>
+<div class="container">
+<div style="text-align: center;">
+</div>
+<div class="row">
+<div style="text-align: center;">
+</div>
+<div class="span12">
+<div style="text-align: center;">
+</div>
+<form method="POST" enctype="multipart/form-data" class="form-horizontal span6">
+  {% csrf_token %}
+  <div style="text-align: center;">
+  </div>
+<fieldset>
+  <div style="text-align: center;"> <legend><b>Registrar Estudiante</b></legend></div>
+  
+  <div class="control-group"> <label class="control-label">{{form.nombre.label}}</label>
+  <div class="controls"> <input class="input-block-level" pattern="\w+ \w+.*" name="nombre" required="" type="text"> </div>
+  </div>
+  <div class="control-group"> <label class="control-label">{{form.apellido.label}}</label>
+  <div class="controls"> <input class="input-block-level" pattern="\w+ \w+.*" name="apellido" required="" type="text"> </div>
+  </div>
+  <div class="control-group"> <label class="control-label">Matricula</label>
+  <div class="controls"> <input class="input-block-level" name="matricula" required="" type="text"> </div>
+  </div>
+  <div class="control-group"> <label class="control-label">Correo</label>
+  <div class="controls"> <input class="input-block-level" name="correo" required="" type="email"> </div>
+  </div>
+  <div class="control-group"> <label class="control-label">Telefono</label>
+  <div class="controls"> <input class="input-block-level" name="telefono" required="" type="text"> </div>
+  </div>
+  <div class="control-group"> <label class="control-label">Genero</label>
+  <div class="controls">{{form.genero}} </div><p>
+
+  <div class="control-group"> <label class="control-label">grupo</label>
+  <div class="controls">{{form.grupo}} </div>
+  </div>
+  <div class="control-group"> <label class="control-label">Subir Foto</label>
+  <div class="controls"> <input class="input-block-level" name="foto" required="" type="file"> </div>
+  
+  <div class="form-actions" align="center"> <button type="submit" class="btn btn-primary">Guardar</button> <button type="button" class="btn">Cancel</button> </div>
+  </div></fieldset> 
+ <!--
+  {{form.nombre.label}} {{form.nombre}}
+  {{form.genero}}
+  {{form.apellido}}
+  {{form.as_p}}!-->
+  
+</form> 
+  {% if estado %}
+      <h2>Guardado con exito.</h2>
+  {% endif %}
+   </div>
+ </div>
+</div>
+{% endblock %}
+    <script src="../../media/js/jquery-1.10.2_cert.js"></script>
+    <script src="../../media/js/bootstrap_cert.js"></script>
+    <script src="../../media/js/jquery.js"></script>
+    <script src="../../../media/bootstrap/round-about/js/jquery-1.10.2.js"></script>
+    <script src="../../../media/bootstrap/round-about/js/bootstrap.js"></script>
+    <script src="../../media/bootstrap/js/bootstrap.js"></script>

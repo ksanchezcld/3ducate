@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>::.Login Estudiantes O&amp;M.::</title>
+      <link rel="stylesheet" href="../../media/static/css/oym_style.css" type="text/css">
+      <link href="../../media/static/bs3/round-about/css/bootstrap.css" rel="stylesheet">
+      <link href="../../media/static/bs3/round-about/css/round-about.css" rel="stylesheet">
+      <link href="../../media/static/bs3/css/bootstrap.min.css" rel="stylesheet">
+      <!--<link href="../../static/css/oym/css/carousel.css 
+  " rel="stylesheet">!-->
+  </head>
+   <body>
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"><br></li>
+        <li data-target="#myCarousel" data-slide-to="1"><br></li>
+        <li data-target="#myCarousel" data-slide-to="2"><br></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <center><img src="../../media/images/gallery/education4.png" alt="first slide" height="300" width="580"></center>
+          <div class="container">
+            <div class="carousel-caption">
+              <!---<p><code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+              -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <center><img src="../../media/images/gallery/civica-education-suite-banner.jpg" alt="Second slide" height="300" width="700"></center>
+          <div class="container">
+            <div class="carousel-caption">
+              <!--<h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <center><img src="../../media/images/gallery/ContinuingEducation.jpg" alt="Third slide" height="300" width="580"></center>
+          <div class="container">
+            <div class="carousel-caption">
+              <!--<h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+    
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            
+<h1 class="text-center login-title"><br>
+</h1>
+
+<h1 class="text-center login-title">Login</h1>
+
+            <div class="account-wall">
+                
+                <form class="form-signin" method="post">{% csrf_token %}
+                <input class="form-control" placeholder="Usuario" required="" autofocus="" name="username" type="user">
+                <input class="form-control" placeholder="Password" required="" autofocus="" name="password" type="password">
+                <button class="btn btn-lg btn-primary btn-block" type="submit" value="login">
+                    Entrar</button>
+                
+                </form>
+            </div>
+            <center><a href="." class="text-center new-account">Logeate con una cuenta diferente</a>
+                    <p><a href="/" class="text-center new-account">Regresar</a>
+            </p></center>
+          </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<div class="sponsors" id="sponsors">
+<center>
+<a href="http://www.mescyt.gob.do/" target="_blank"><img style="width: 75px; height: 75px;" class="img-rounded" src="../../media/images/sponsors/mescyt.png"></a>&nbsp;&nbsp;
+<a href="http://opensource.org/" target="_blank"><img style="width: 75px; height: 75px;" class="img-rounded" src="../../media/images/sponsors/Opensource.png"></a>&nbsp;&nbsp;
+<a href="http://incube2.com/" target="_blank"><img style="width: 168px; height: 70px;" class="img-rounded" src="../../media/images/sponsors/incube2log.png"></a>&nbsp;&nbsp;
+<a href="http://technet.microsoft.com/es-do/" target="_blank"><img style="width: 158px; height: 158px;" class="img-rounded" src="../../media/images/sponsors/technet2.png"></a>&nbsp;&nbsp;
+<a href="http://www.vmware.com" target="_blank"><img style="width: 138px; height: 180px;" class="img-rounded" src="../../media/images/sponsors/vmware.png">
+</a><a href="https://www.coursera.org/courses" target="_blank"><img style="border: 0px solid ; width: 133px; height: 175px;" alt="coursera" class="img-rounded" src="../../media/images/sponsors/coursera.png">
+</a><a href="https://university.mongodb.com/courses" target="_blank"><img style="border: 0px solid ; width: 131px; height: 42px;" alt="mongodb" class="img-rounded" src="../../media/images/sponsors/mongodbuniversity.png">
+</a><a href="https://www.edx.org/course-list" target="_blank"><img style="border: 0px solid ; width: 76px; height: 101px;" alt="edx" class="img-rounded" src="../../media/images/sponsors/edx.png">
+</a><a href="https://www.udacity.com/courses#%21/All" target="_blank"><img style="border: 0px solid ; width: 52px; height: 69px;" alt="udacity" class="img-rounded" src="../../media/images/sponsors/udacity.jpg">
+</a></center></div>
+<div style="text-align: center;"><span style="font-weight: bold; color:#000000;">Copyright ©</span> ksanchez 2014<br>
+</div>
+<script src="../../media/static/js/jquery-1.11.1.min.js"></script>
+<script src="../../media/static/bs3/js/bootstrap.min.js"></script>
+<script src="../../media/static/bs3/assets/js/docs.min.js"></script>
+</body></html>

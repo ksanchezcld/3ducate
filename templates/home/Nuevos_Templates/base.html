@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<title>{% block title %}{% endblock %}</title>
+	<meta name description="educacion en linea" content=""/>
+
+	<link rel="stylesheet" href="../../media/static/css/normalize.css"/>
+	<link rel="stylesheet" href="../../media/static/css/oym_style.css"/>
+	<link rel="stylesheet" href="../../media/static/bs3/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../../media/static/lightbox/1.10.2/lightbox.css"/>
+</head>
+<body>
+<header>
+	<div class="logo">
+		<img src="../../media/images/logo/logo_oym.png" alt="logo_oym">
+	</div>
+</header>
+
+<nav>
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<ul class="nav navbar-nav">
+
+				{% if user.is_authenticated %}
+
+
+			<li>
+				<a href="/"><i class="glyphicon glyphicon-home"></i>Pagina principal |</a>
+			</li>
+
+			<li>
+				<a href="/materia/"><i class="glyphicon glyphicon-tasks"></i>Programa Clases |</a>
+			</li>
+
+			<li>
+				<a href="/reglamento/"><i class="glyphicon glyphicon-eye-open"></i>Reglamento |</a>
+			</li>
+
+			<li class="dropdown">
+				<a href="" class="dropdown-toggle" data-toggle="dropdown"/>
+				
+				<i class="glyphicon glyphicon-list"></i>Estudiantes |<b class="caret"></b></a>
+
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+					<li>
+						<a href="/reg_estudiantes/">Registro Estudiantes</a>
+					</li>
+
+					<li>
+						<a href="/registrados/pagina/1/">Estudiantes Registrados</a>
+					</li>
+
+					<li>
+						<a href="/listado/">Listado Oficial</a>
+					</li>
+
+					<li>
+						<a href="/reporte/">Reporte Calificaciones</a>
+					</li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="/audiovisuales/"><i class="glyphicon glyph-headphones"></i>Audiovisuales |</a>
+			</li>
+			
+			<li>
+				<a href="/bliblioteca/"><i class="glyphicon glyphicon-list-alt"></i>Biblioteca |</a>
+			</li>
+
+			<li>
+				<a href="/faq/"><i class="glyphicon glyphicon-pushpin"></i>Q&A</a>
+			</li>
+
+			<li class="dropdown">
+				<a href="" class="dropdown-toggle" data-toggle="dropdown"/><i class="glyphicon-cloud"></i>Juegos |<b class="caret"></b></a>
+
+				<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+					<li>
+						<a href="#">Protocolos</a>
+					</li>
+
+					<li>
+						<a href="#">Ahorcado</a>
+					</li>
+				</ul>
+			</li>
+			
+			<li>
+				<a href="/certificados/"><i class="glyphicon glyphicon-star"></i>Certificados |</a>
+			</li>
+
+			<li>
+				<a href="/logout/"><i class="glyphicon glyphicon-off"></i>Salir</a>
+			</li>
+
+			<li>
+				<a href="#">|<i class="glyphicon glyphicon-user"></i><strong>Usuario : [{{user.username}}]</strong></a>
+			</li>
+			
+			{% else %}
+			
+			<li>
+				<a href="/login/"><i class="glyphicon glyphicon-hand-right"></i>Ingresar</a>			
+			</li>
+
+			<li>
+				<a href="/about/"><i class="glyphicon glyphicon-user"></i>Acerca de...</a>
+			</li>
+			{% endif %}
+	    </li>
+      </div>
+    </ul>
+  </div>
+</nav>
+
+<section>
+	 {% block content %}{% endblock %}
+</section>
+
+<footer>
+	<div class="sponsors">
+  
+        <a href="http://incube2.com/" target="_blank">
+        <img class="img-rounded" src="../../media/images/sponsors/incube2log.png" alt="incube2"/></a>
+                         
+        <a href="https://www.udacity.com/courses#%21/All" target="_blank">
+        <img class="img-rounded" src="../../media/images/sponsors/udacity.jpg" alt="udacity"/></a>
+            
+        <a href="http://opensource.org/" target="_blank">
+        <img class="img-rounded" src="../../media/images/sponsors/coursera.jpg" alt="opensource"/></a>
+
+        <a href="http://mescyt.com.do/" target="_blank">
+        <img class="img-rounded" src="../../media/images/sponsors/mescyt.png" alt="Mescyt"/></a>
+                         
+        <a href="https://www.udacity.com/courses#%21/All" target="_blank">
+        <img class="img-rounded" src="../../media/images/sponsors/edx.png" alt="udacity"/></a>
+            
+        <a href="http://opensource.org/" target="_blank">
+        <img class="img-rounded" src="../../media/images/sponsors/Opensource.png" alt="opensource"/></a>
+
+        <a href="#" target="_blank">
+        <img class="img-rounded" src="../../media/images/sponsors/mongodbuniversity.png" alt="mongodb"/></a>
+    </div>
+            
+    <div class="credentials">
+        Creative Common by, Kennedy Sanchez 2014
+    </div>
+</footer>
+
+<script src="../../media/static/js/modernizr/modernizr-latest.js"/>	
+<script src="../../media/static/js/jquery-2.1.1.min.js"/>
+
+ <!--USAR ESTE EFECTO EN LA VERSION NUEVA Y BORRAR ESTAS LINEAS-->
+    <link href="../../media/static/lightbox/1.10.2/lightbox.css" rel="stylesheet" />
+    <script src="../../media/static/lightbox/1.10.2/jquery-1.10.2.min.js"></script> 
+    <script src="../../media/static/lightbox/1.10.2/jquery-1.10.2_cert.js"></script>
+    <script src="../../media/static/lightbox/1.10.2/bootstrap_cert.js"></script>
+    <script src="../../media/static/lightbox/1.10.2/lightbox-2.6.min.js"></script> 
+    <script src="../../media/static/bs3/pop-over/js/popover.js"></script> 
+</body>
+</html>

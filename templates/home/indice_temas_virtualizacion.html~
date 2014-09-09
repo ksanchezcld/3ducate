@@ -1,0 +1,199 @@
+{% extends 'home/base.html' %}
+{% block title %}::.Sistema Universidad O&amp;ap;M.::{% endblock %}
+{% block content %}
+  <link rel="stylesheet" href="../../media/bootstrap/css/timeline.css">
+  <link rel="stylesheet" href="../../media/bootstrap/css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="../../media/bootstrap/dist/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="../../media/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../../media/css/background_color.css">
+     <div class="container">
+   			<div class="page-header">
+         		<h1 id="timeline" align="center">PROGRAMA DE ASIGNATURA</h1><p>{{mensaje}}
+            <!--     
+        			{% for materia in materia %}
+        				<h3><b>{{materia.descripcion}}</b></h3>
+        			{% endfor %}
+ 		        !-->
+      	<div style="text-align: right; color: rgb(7, 14, 21);">
+			   		<a href="/audiovisuales/"><button class="btn btn-primary">Audiovisuales</button></a>
+     			</div>
+			   </div>
+    		</div>
+        <ul class="timeline">
+         <li>
+          <div class="timeline-badge darkblue"><i class="glyphicon glyphicon-check"></i></div>
+           <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h3 class="timeline-title"><b>Tema 1: <a href="#">INTRODUCCION</a></b>
+              <!--
+              {% for num_cap in num_cap %}
+                  {{num_cap.num_capitulo}}:
+
+              {% for capitulo in capitulo %}
+                 {{capitulo.titulo}}
+              {% endfor %}</b></h4>
+              {% endfor %}
+              !-->
+               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 1 Semana</small></p>
+            </div>
+            <div class="timeline-body">
+              <!--
+              {% for contenido in cont_cap %}
+                <p>{{contenido.contenido}}.</p>
+              {% endfor %}
+              !-->
+             <div class="timeline-body">
+                  <p>1.1. Conceptos de Sistemas Operativos.</p>
+                  <p>1.2. Generaciones/Historia.</p>
+                  <p>1.3. Componentes.</p>
+                  <p>1.4. Tipos.</p>
+                  <p>1.5. Ventajas.</p>
+                  <p>1.6. Archivos.</p>
+                  <p>1.5. Shell.</p>
+             </div>
+        </li>
+        </ul>
+        <ul class="timeline">
+         <li>
+          <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+           <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h3 class="timeline-title"><b>Tema 2: <a href="#">FASE DE DISENO DE UN SISTEMA OPERATIVO</a></b><p>
+              <!--
+              {% for cap_mat in cap_mat %}
+                  {{cap_mat.num_capitulo}}:</b></h4>
+              {% endfor %}
+              !-->
+               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2 Semanas </small></p>
+             </div>
+              <div class="timeline-body">
+                  <p>2.1. Estructura de un Sistema Operativo.</p>
+                  <p>2.2. Sistemas Monoliticos.</p>
+                  <p>2.3. Maquinas Virtuales.</p>
+                  <p>2.4. Modelo Cliente/Servidor.</p>
+                  <p>2.5. Introduccion al Kernel.</p>
+              </div>
+          </li>
+         </li>
+        </ul>
+        <ul class="timeline">
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-hdd"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h3 class="timeline-title">Tema 3: <a href="#">PROCESOS</a>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2 Semanas</small></p>
+            </div>
+              <div class="timeline-body">
+                  <p>3.1. Sistemas por tipo.</p>
+                  <p>3.2. Introduccion a los procesos.</p>
+                  <p>3.3. Organizacion y gestion de procesos.</p>
+                  <p>3.4. Estado y transicion de estado de los procesos.</p>
+                  <p>3.5. Comunicacion entre procesos.</p>
+                  <p>3.6. Planificacion de procesos.</p>
+                  <p>3.7. Memoria para la gestion de los procesos.</p>
+                  <p>3.8. Llamadas al sistema para la gestion de los procesos.</p>
+            </div>
+         </li>
+        </ul>
+        <ul class="timeline">
+         <li>
+          <li class="timeline-inverted">
+          <div class="timeline-badge info"><i class=" glyphicon glyphicon-floppy-disk"></i></div>
+           <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h3 class="timeline-title"><b>Tema 4: <a href="#">ENTRADA Y SALIDA</a></b>
+               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2 Semanas</small></p>
+            </div>
+              <div class="timeline-body">
+                  <p>4.1. Principios de Hardware Entrada/Salida.</p>
+                  <p>4.2. Prinpios del Software de Entrada/Salida.</p>
+                  <p>4.3. Interfase con los manejadores de dispositivos.</p>
+                  <p>4.4. Manejadores de discos y terminales.</p>
+                  <p>4.5. Acceso de acceso directo a memoria (DMA).</p>
+                  <p>4.6. Introduccion a los DLL o Drivers.</p>
+                  <p>4.7. Memoria para la gestion de los procesos.</p>
+                  <p>4.8. Llamadas al sistema para la gestion de los procesos.</p>
+              </div>
+          </div>
+         </li>
+        </li>
+       </ul>
+        <ul class="timeline">
+         <li>
+          <div class="timeline-badge darkblue"><i class="glyphicon glyphicon-phone"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h3 class="timeline-title"><b>Tema 5: <a href="#">NIVELES DE CAPA OSI</a></b>
+               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 1 Semana</small></p>
+            </div>
+            <div class="timeline-body">
+              <p>5.1. Estructura del modelo OSI.</p>
+            </div>
+        </li>
+        </ul>
+        <ul class="timeline">
+         <li>
+          <li class="timeline-inverted">
+          <div class="timeline-badge blue"><i class="glyphicon glyphicon-comment"></i></div>
+           <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h3 class="timeline-title"><b>Tema 6: <a href="#">ADMINISTRACION DE MEMORIA</a></b>
+               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2 Semanas</small></p>
+            </div>
+             <div class="timeline-body">
+                  <p>4.1. Principios de Hardware Entrada/Salida.</p>
+                  <p>4.2. Prinpios del Software de Entrada/Salida.</p>
+                  <p>4.3. Interfase con los manejadores de dispositivos.</p>
+                  <p>4.4. Manejadores de discos y terminales.</p>
+                  <p>4.5. Acceso de acceso directo a memoria (DMA).</p>
+                  <p>4.6. Introduccion a los DLL o Drivers.</p>
+                  <p>4.7. Memoria para la gestion de los procesos.</p>
+                  <p>4.8. Llamadas al sistema para la gestion de los procesos.</p>
+              </div>
+        </li>
+        </li>
+        </ul>
+        <ul class="timeline">
+         <li>
+          <div class="timeline-badge success"><i class="glyphicon glyphicon-link"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h3 class="timeline-title"><b>Tema 7: <a href="#">SISTEMAS DE ARCHIVOS</a></b>
+               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2 Semanas</small></p>
+            </div>
+              <div class="timeline-body">
+                  <p>7.1. Archivos.</p>
+                  <p>7.2. Tipos.</p>
+                  <p>7.3. Directorios.</p>
+                  <p>7.4. Implementacion de sistemas de archivo.</p>
+                  <p>7.5. Mecanismo de proteccion.</p>
+              </div>
+          </li>
+         </li>
+         </ul>
+         <ul class="timeline">
+         <li>
+          <li class="timeline-inverted">
+          <div class="timeline-badge primary"><i class="glyphicon glyphicon-log-out"></i></div>
+           <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h3 class="timeline-title"><b>Tema 8: <a href="#">SEGURIDAD Y CONTROL DE LOS SISTEMAS OPERATIVOS</a></b>
+               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 1 Semana</small></p>
+            </div>
+              <div class="timeline-body">
+                  <p>8.1. Password.</p>
+                  <p>8.2. Validacion de Usarios.</p>
+                  <p>8.3. Caducidad.</p>
+                  <p>8.4. Firewall.</p>
+                  <p>8.5. Vulnerabilidad.</p>
+                  <p>8.6. Redes.</p>
+              </div>
+        </li>
+      </li>
+    </ul>
+  </div>
+{% endblock %}
+    <script src="../../../media/bootstrap/round-about/js/jquery-1.10.2.js"></script>
+    <script src="../../../media/bootstrap/round-about/js/bootstrap.js"></script>

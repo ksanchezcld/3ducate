@@ -1,0 +1,18 @@
+
+<html><head><title>::.Buzon de Sugerencias.::</title></head>
+<body>
+<p><center><b><h2>Favor llenar el formulario para enviar una sugerencia.</h2></b></center></p>
+
+<br><b><center>
+{% if enviarInfo %}
+	<h2>Gracias por enviarnos sus recomendaciones, en un momento estaremos atendiendola.</h2>
+{% else %}	
+	<form action ="." method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+	<button class="btn-primary" type="submit">Enviar Comentarios</button>
+	<button class="btn-primary" type="button">Limpiar Campos</button>
+	</b></center></form>
+{% endif %}
+</body>
+</html>

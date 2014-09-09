@@ -1,0 +1,12 @@
+{% extends "listado.html" %}
+
+{% block contenido %}
+
+    <div class="wrapper">
+        <h1>Listado Preguntas Frecuentes con Respuestas</h1>
+          {% for faq in object_list%}
+	     {{ faq.id }}	
+	     <b>{{ faq.pregunta }}</b><p>
+	     {{ faq.respuesta}}	
+	  {% endfor %}
+{% endblock %}

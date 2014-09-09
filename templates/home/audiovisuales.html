@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+{% block title %}::.Audiovisuales sistema operativo II.::{% endblock %}
+ <!--
+   <link rel="stylesheet" href="../../media/static/bs3/css/bootstrap.css"/>
+   <link rel="stylesheet" href="../../media/static/css/background_color.css"/>
+   <link href="../media/css/lightbox.css" rel="stylesheet" />
+!-->
+    <style type="text/css">
+	div.guide {margin:12px 24px;}
+	div.guide span {color:#ff0000; font:italic 14px Arial, Helvetica, sans-serif;}
+	div.guide p {color:#000000; font:14px Arial, Helvetica, sans-serif;}
+	div.guide pre {color:#990000;}
+	div.guide p.title {color:#df501f; font:18px Arial, Helvetica, sans-serif;}
+
+{% block content %}		
+<div style="text-align: center;"> <!-- A wrapper DIV to center the Gallery -->
+  <div style="margin: 0pt auto; display: none;" class="html5gallery" data-skin="gallery" data-width="800" data-height="600" data-resizemode="fill">
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/1-nutserverintall.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/win2008.jpeg" alt="Instalacion Servidor Windows 2008"></a>
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/windows/2-join.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/windowsxp2.jpeg" alt="Ingresar Dominio Windows XP"></a>
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/2-vistajoin.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/windowsvista.jpeg" alt="Ingresar Windows Vista Dominio"></a>
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/2-win8join.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/win8.jpeg" alt="Ingresar Windows8 Dominio"></a>
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/3-ntfs.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/ntfs.jpeg" alt="Permisos NTFS XP"></a>
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/3-vistantfs.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/ntfs.jpeg" alt="Permisos NTFS Vista"></a>
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/3-win7ntfs.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/ntfs.jpeg" alt="Permisos NTFS Windows7"></a>
+      <a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/4-win7sharefile.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/sharing.jpeg" alt="Compartir carpeta Windows7"></a>
+      <a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/5-vistashare.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/sharing2.jpeg" alt="Compartir carpeta Windows Vista"></a>		
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/4-win8filesharing2.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/sharing.jpeg" alt="Compartir carpeta Windows8"></a>
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/8-vistaprinter.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/sharedprinter.jpg" alt="Compartir Impresora Windows Vista"></a>
+		<a href="../../media/recursos/nos/infraestructura_windows/video_topic/windows/7-nutinstallad.mp4"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/ad.jpeg" alt="Instalar Active Directory"></a>
+		<a href="../../media/recursos/networking/video_topic/dns/Instalando_Configurando_DNS_Server_Windows_Server.avi"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/ad.jpeg" alt="Instalando/Conf. DNS"></a>
+		<a href="../../media/recursos/networking/video_topic/lan/Curso_de_Redes_1_Conceptos_fundamentales_1.avi"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/ad.jpeg" alt="Conceptos Redes 1"></a>
+		<a href="../../media/recursos/networking/video_topic/lan/Curso_de_Redes_2_Conceptos_fundamentales_2.avi"><img src="../../media/recursos/video_topic/infraestructura_windows/windows/ad.jpeg" alt="Conceptos Redes 2"></a>
+		<a href="../../media/recursos/networking/video_topic/lan/Curso_de_Redes_3_Qué_es_una_red_local.avi"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/ad.jpeg" alt="LAN"></a>
+		<a href="../../media/recursos/networking/video_topic/protocolos/Curso_Redes_7_Protocolos_Red.avi"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/ad.jpeg" alt="Protocolos Red 1"></a>
+		<a href="../../media/recursos/networking/video_topic/protocolos/Curso_Redes_8_Protocolo_TCP_IP.avi"><img src="../../media/recursos/nos/infraestructura_windows/image_topic/ad.jpeg" alt="Protocolos Red 2"></a>
+	</div>
+  </div>
+<br><br><br>
+<center><a href="javascript:window.history.go(-1);" class="btn btn-primary">Regresar</a></center><br>
+
+ 	<!-- JavaScript -->
+    <script src="../../media/static/lightbox/1.10.2/jquery-1.10.2_cert.js"></script>
+    <script src="../../media/static/bs3/js/bootstrap_cert.js"></script>
+    <script type="text/javascript" src="../../media/static/html5gallery/html5gallery.js"></script>
+{% endblock %}
+

@@ -1,0 +1,95 @@
+{% extends 'home/base.html' %}
+{% block title %}::.Listado Estudiantes O&amp;M.::{% endblock %}
+{% block content%}	
+
+<!--<link rel="stylesheet" href="../../../media/css/background_color.css">!-->
+
+<link rel="stylesheet" href="../../../media/static/bs3/round-about/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="../../../media/static/bs3/round-about/css/round-about.css" type="text/css">
+<link rel="stylesheet" href="../../../media/static/bs3/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="../../../media/static/css/3-col-portfolio.css" type="text/css">
+<link rel="stylesheet" href="../../../media/static/css/oym_style.css" type="text/css"> 
+
+<!--
+<script src="../../media/js/jquery-1.10.2_cert.js"></script>
+<script src="../../media/js/bootstrap_cert.js"></script>
+!-->
+<div class="title">
+ <h2 class="page-header">
+   <center>{{msg|title}}</center>
+ </h2>
+</div>
+   <!-- block search_box starts -->
+                {% block search_box %}
+                <b>Buscar:</b>
+                <div class=" pull-right" id="search_box">
+                    <form action="" method="get">
+                        <div class="pull-left">
+                            <input name="q"  type="text" id="search_field"  value="" class="input-large search-query" placeholder="Nombre, Matricula, Grupo" />
+                        </div>
+                    </form>
+                </div>
+                {% endblock search_box %}
+   <!-- block search_box ends -->
+    <style type="text/css">
+		.estd_ul{margin:0;padding:0 70px;width:999px;height:300px;list-style:none outside none;}
+		.estd_ul li{float: left;text-align:center;width:280px;}
+	</style>
+   		<div class="row-body">
+			<center>
+		   	  <br>
+		   	  <ul class="estd_ul"> 
+		   	  	  {% for estd in estudiante %}
+		   	  	 	 <li><img style="width: 200px; height: 200px; background-size: 100% 100%" alt="foto" src="{{MEDIA_URL}}{{estd.foto}}" class="foto">
+			 		 <h3>{{estd.nombre|capfirst}} {{estd.apellido|capfirst}}<small><p> ({{estd.matricula}})</small></h3>
+			      {% for correo in correo %}
+			 		      {% if correo.estudiante_id == estd.id %} 
+					          <p>{{correo.correo}}</p>
+			 		      {% endif %}
+			      {% endfor %}
+
+			      {% for grupo in grupo %}
+					  	  {% if estd.grupo_id == grupo.id %}
+					          <p><b>Grupo:</b>{{grupo.num_grp}}</p>
+					  	  {% endif %}
+				  {% endfor %}
+				  <button class="btn btn-primary">Reporte</button><p><br><br><p>
+			 	</li>
+		   	 {% endfor %}
+				</ul>
+			   </center>
+			  </div> 
+
+			   <div class="pagination-header">
+		         <hr>
+		          <ul class="pagination">
+		          	{% if estudiante %}
+		          		<li><a href="/registrados/pagina/1/">««</a></li>
+		        	{% if estudiante.has_previous %}
+		          		<li><a href="/registrados/pagina/{{estudiante.previous_page_number}}/">«</a></li>
+		          		{% else %}
+		          			<li><a href="#">«</a></li>
+		          		{% endif %}
+			          	    <li><a href="/registrados/pagina/1/">1</a></li>
+				            <li><a href="/registrados/pagina/2/">2</a> </li>
+			                <li><a href="/registrados/pagina/3/">3</a> </li>
+			            	<li><a href="/registrados/pagina/4/">4</a> </li>
+			            	<li><a href="/registrados/pagina/5/">5</a> </li>
+			    	    {% if estudiante.has_next%}
+		                	<li><a href="/registrados/pagina/{{estudiante.next_page_number}}/">»</a> </li>
+		                {% else %}		
+		                	<li><a href="#">»</a> </li>
+		                {% endif %}
+		                	<li><a href="/registrados/pagina/{{estudiante.paginator.num_pages}}/">»»</a> </li>
+		            {% endif %}
+		            <br><br>
+		            <center><b>Pagina {{ estudiante.number }} de {{ estudiante.paginator.num_pages }}</b></center>
+		          </ul>
+		        </div>
+{% endblock %}
+
+<!-- 
+- Agregar estrellitas de acuerdo a los puntos acumulados(5) y organizar de mayor puntuacion a menor
+
+- Colocar un listbox para filtrar los estudiantes por grupos(grupo1, grupo2)
+!-->

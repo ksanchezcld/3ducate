@@ -1,0 +1,32 @@
+{% extends "listado.html" %}
+
+{% block contenido %}
+
+    <div class="wrapper">
+        
+        <h1>Listado Estudiantes</h1>
+
+       {% for estudiante in listado_estudiante %}
+        <div class="box {% cycle 'gris' 'normal' %}">
+            
+            <span class="order">{{ forloop.counter }}</span>
+
+            <span><b>{{ estudiante.matricula }}</b></span>
+            - (<span>{{estudiante.nombre }},{{estudiante.apellido}}</span>)
+            
+            <span class="publicado {% if estudiante.status %}verde{% else %}rojo{% endif %}">
+            {% if estudiante.status == True %}
+            	<span>A</span>
+            {% else %}
+            	<span>I</span>
+            {% endif %}
+            </span>
+
+        </div>
+        {% empty %}
+            <div class="alerta">
+                <p>Lo sentimos, no encontramos resultados.</p>
+                <p><a href="/admin">Puedes agregar más artículos.</a></p>
+            </div>
+        {% endfor %}
+{% endblock %}

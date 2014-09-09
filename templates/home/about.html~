@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+
+  
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8"><!-- Stylesheets -->
+    
+    <link rel="stylesheet" href="../../media/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../media/bootstrap/css/bootstrap-responsive.css">
+    <script src="../../media/js/jquery.js"></script>
+    <script src="../../media/bootstrap/js/bootstrap.js"></script>
+    <style type="text/css">
+		  body{
+		  	padding-top: 60px;
+		  	padding-bottom: 40px;
+
+		  }
+		  .sidebar-nav{
+		  	padding: 9px 0;
+		  }
+		</style>
+    <script type="text/javascript">
+        $(document).on('ready',function(){
+              $.ajax({
+                  type:"GET",
+                  contentType:"application/json; charset=utf-8",
+                  dateType:"json",
+                  url:"/ws/servidores/",
+                  success:function(response){
+                          var i = (response.length-1)-9;
+                          for(i;i<=(response.length-1);i++){
+                              $('#ServidoresNuevos').append("<li>"+response[i].fields.hostname+"</li>"); 
+                              $('#time_reg').append("<li>"+response[i].fields.time_reg+"</li>");
+                         }    
+                  }
+              });
+        });
+    </script></head><body>
+    <div class="span12 well">
+      <center> <a href="about.html#aboutModal" data-toggle="modal"><img src="../../media/images/usuarios/ksanchez.jpg" name="aboutme" class="img-circle" height="140" width="140"></a>
+        <h3>Kennedy Sanchez</h3>
+        &nbsp; <a target="_blank" href="http://dev4sec.blogspot.com/">Blog
+
+          dev4sec</a> <br>
+        <a target="_blank" href="https://www.youtube.com/channel/UCYXR6jyFsPyK0IW9d13U8bQ">Canal
+
+          Youtube</a> <br>
+        <br>
+        <a href="file:///media/02a8b256-a208-403c-b672-ec16719a571e_/Ksanchez_Datafile/Dropbox/PROGRAMACION/Python_Y_Django/DJANGO/PROYECTOS/O&amp;M_V2/registro_estudiantes_oym/registro_estudiantes_oym/templates/home/about.html" class="btn btn-primary">Regresar</a> </center>
+      <div class="modal hide" id="aboutModal">
+        <div class="modal-header"> <button type="button" class="close" data-dismiss="modal">✕</button>
+          <h3>Acerca de...</h3>
+        </div>
+        <div class="modal-body" style="text-align: center;">
+          <div class="row-fluid">
+            <div class="span10 offset1">
+              <div id="modalTab">
+                <div class="tab-content">
+                  <div class="tab-pane active" id="about"> <img src="../../media/images/usuarios/ksanchez.jpg" name="aboutme" class="img-circle" border="0" height="140" width="140">
+                    <h3 class="media-heading">Kennedy Sanchez <small>
+                        Santo Domingo</small></h3>
+                    <span><strong>Conocimientos: </strong></span> <span class="label label-info">Security+ Certified</span>
+                    <span class="label label-info">Ps. Auditor Sistemas</span>
+                    <span class="label label-info">MGP</span>
+                    <p> <span class="label label-success">Programacion</span>
+                      <span class="label label-success">Redes</span> <span class="label label-success">Sevidores</span> <span class="label label-success">Internet</span> <span class="label label-success">Hacking Etico</span>
+                    </p>
+                    <hr>
+                    <center>
+                      <p class="text-left"><strong>Biografia: </strong><br>
+                        Graduado de Ingeniero de Sistemas en la
+                        universidad central del este (UCE), con Maestria
+                        en Gerencia y Productividad en la universidad
+                        APEC, y Post grado de Auditoria de Sistemas en
+                        la universidad O&amp;M.</p>
+                      <a href="http://do.linkedin.com/pub/kennedy-sanchez/31/315/1b1" target="_blank">Linkedin</a><br>
+                      <a href="galeria_certificados.html" target="_blank">Certificaciones</a> <br>
+                    </center>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body></html>

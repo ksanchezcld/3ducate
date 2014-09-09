@@ -1,0 +1,182 @@
+{% extends 'home/base.html' %}
+{% block title %}::.Indice Materias O&M.::{% endblock %}
+{% block content %}
+
+<div class="container">
+  <div class="col-sm-4 col-md-4">
+    <div class="post">
+      <div class="poster-networking">
+        {% for materia in materia_red %}
+          <h1><strong>{{materia|upper}}<strong></h1>
+        {% endfor %}
+      </div>
+
+        <div class="post-img-content">
+          <span class="post-title"><b>
+            {% for  materia in materia_red %}
+              {{materia.name|upper}}
+            {% endfor %}</span>
+        </div>
+        
+          <div class="content">
+            <div class="author">
+  <!--ELEGIR EL NOMBRE PROFESOR DE ACUERDO AL ID MATERIA O ID DEL PROFESOR LOGEADO!-->
+              Prof.: <strong>
+                {% for profesor in nom_prof %}
+                  {{profesor}}
+                {% endfor %}</strong> |
+                  
+              <time datetime="2014">2014</time>
+            </div>
+            
+                <div class main-text align="justify">
+                  {% for  materia in materia_red %}
+                    {{materia.detail}}
+                  {% endfor %}
+                </div>
+
+                    <div class="po-markup">
+                      <p><a target="_blank" href="http://ocw.uoc.edu/computer-science-technology-and-multimedia/computer-networks/computer-etworks/XP06_M2105_01496.pdf" class="po-link">http://ocw.uoc.edu</a></p>
+                       
+                       <div class="po-content hidden">
+                          <div class="po-title">
+                            <img src="../../media/images/capitulos/networking/Redes.jpg" alt="Libro Sistemas Operativos Modernos" width="16" height="16" />
+                          </div>
+        
+        <!--EXTRAER DATOS DE TABLA BIBLIOTECA!-->
+                            <div class="po-body"><p>
+                              <strong>Redes de Computadoras,
+                                      UOC(www.uoc.edu),
+                                      Primera Ed. Marzo 2004,
+                                      Depósito legal: B-7.598-2004
+                              </strong>
+                            </div>
+                          </div>
+                         </div>
+        
+                        <div class="index">
+                          <a href="/tema-networking/" class="btn btn-warning btn-sm">Indice</a>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+        
+  <div class="col-sm-4 col-md-4">
+    <div class="post">
+      <div class="post-img-content">
+        <div class="poster-nos">
+          {% for materia in materia_nos%}
+            <h1><strong>{{materia|upper}}<strong></h1>
+         {% endfor %}
+        </div>
+  
+          <div class="post-img-content">
+            <span class="post-title"><b>
+              {% for  materia in materia_nos %}
+                {{materia.name|upper}}
+              {% endfor %}</span>
+          </div>
+        </div>
+                
+          <div class="content">
+            <div class="author">
+              Prof.: <strong>
+                {% for profesor in nom_prof%}
+                  {{profesor}}</strong>
+                {% endfor %}  |
+              <time datetime="2014">2014</time>
+            </div>
+                  
+            <div align="justify">
+              {% for materia in materia_nos%}
+                {{materia.detail}}
+              {% endfor %}
+            </div>
+       
+            <div class="po-markup">
+              <a target="_blank" href="http://personals.ac.upc.edu/elara/documentacion/WSERVER%20-%20UD1%20-%20Introduccion%20SO%20en%20red.pdf" class="po-link">http://personals.ac.upc.edu</a>
+           
+              <div class="po-content hidden">
+                <div class="po-title">
+                  <img src="../../media/images/libros/portada/front/nos/Sistemas_oper_Modernos_3ra_ed.jpg" alt="Libro Sistemas Operativos Modernos" width="16" height="16" />
+                </div> 
+                           
+                <div class="po-body">
+
+  <!--CARGAR DE TABLA LIBROS!-->
+                  <strong>Introduccion Sistemas Operativos de Red, UPC(www.upc.edu).</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+                     
+              <div class="index">
+                <center><a href="/temas/" class="btn btn-primary btn-sm">Indice</a></center>
+              </div>
+            </div>
+          </div>
+
+    <div class="col-sm-4 col-md-4">
+      <div class="post">
+        <div class="post-img-content">
+          <div class="poster-vm">
+            {% for materia in materia_vm %}
+                <h1><strong>{{materia|upper}}<strong></h1>
+            {% endfor %}
+           </div>
+
+            <div class="post-img-content">
+              <span class="post-title"><b>
+                {% for  materia in materia_vm %}
+                  {{materia.name|upper}}
+                {% endfor %}</span>
+            </div>
+          </div>
+            
+        <div class="content">
+          <div class="author">
+            Prof.: <strong>
+              {% for profesor in nom_prof%}
+                {{profesor}}</strong>
+              {% endfor %} |
+            <time datetime="2014">2014</time>
+          </div>
+                 
+            <div align="justify">
+              {% for materia in materia_vm%}
+                {{materia.detail}}
+              {% endfor %}
+            </div>
+                    
+            <div class="po-markup">
+              <a target="_blank" href="http://www.vmware.com/es/virtualization#sthash.OvCpkJ3p.dpuf" class="po-link">http://personals.ac.upc.edu</a>
+                <div class="po-content hidden">
+                  <div class="po-title">
+                    <img src="../../media/images/capitulos/networking/Redes.jpg" alt="Libro Sistemas Operativos Modernos" width="16" height="16" />
+                  </div> 
+                            
+                    <div class="po-body">
+                      <div class="po-body">
+                      {% for materia in materia_vm%}
+                        {{materia|capfirst}}
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+                  <div class="index">
+                    <a href="/tema-virtualizacion/" class="btn btn-success btn-sm">Indice</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}
+    <link href="../../media/static/lightbox/1.10.2/lightbox.css" rel="stylesheet" />
+    <script src="../../media/static/lightbox/1.10.2/jquery-1.10.2.min.js"></script> 
+    <script src="../../media/static/lightbox/1.10.2/jquery-1.10.2_cert.js"></script>
+    <script src="../../media/static/lightbox/1.10.2/bootstrap_cert.js"></script>
+    <script src="../../media/static/lightbox/1.10.2/lightbox-2.6.min.js"></script> 
+    <script src="../../media/static/bs3/pop-over/js/popover.js"></script> 

@@ -1,0 +1,21 @@
+<html><head><title>::.Biblioteca de Temas.::</title></head>
+	<body>
+		<br>
+			<center><h2>{{msg}}</h2></center>
+			<p><center><b>TEMA 1.</b><br><a href="#">Historia sistemas operativos.<br><a href="#">Ver Videos</a></center>
+			<p><center><b>TEMA 2.</b><br><a href="#">Tipos y caracteristicas de sistemas operativos.<br><a href="#">Ver Videos</a></center>
+			<p><center><b>TEMA 3.</b><br><a href="#">Administracion de la memoria.<br><a href="#">Ver Videos</a></center>
+			<p><center><b>TEMA 4.</b><br><a href="#">Administracion de E/S.<br><a href="#">Ver Videos</a></center>
+			<p><center><b>TEMA 5.</b><br><a href="#">Modelo OSI.<br><a href="#">Ver Videos</a></center>
+			<p><center><b>TEMA 6.</b><br><a href="#">Seguridad en los sistemas operativos.<br><a href="#">Ver Videos</a></center>
+			<p><center><b>TEMA 7.</b><br><a href="#">Otros.</br></a></center></p>
+			<p><center><b>Tema 8.</b><a href="#" >Temas libres</a></center>
+		<br>
+			<center><a href="#">Descarga de Libros.</a></center>
+			<center><a href="#">Mas Videotutoriales.</a></center>
+			<center><a href="#">Otras fuentes.</a></center>
+		<br>
+			<center><a href="#">AQUI VA UN BOTON REGRESAR</a></center>
+</body>
+</html>
+
