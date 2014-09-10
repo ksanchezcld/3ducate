@@ -1,13 +1,29 @@
-{% extends "listado.html" %}
+{% extends "home/base.html" %}
 
-{% block contenido %}
+{% block content %}
 
+<div class="title">
+    <h1>Cuestionario Sistema Operativo II</h1>
+</div>
+
+{% for faq in preguntasresp%}
+   {% if faq.estudiante.status %}
     <div class="wrapper">
-        <h1>Listado Preguntas Frecuentes con Respuestas</h1>
-          {% for faq in preguntasresp%}
-	    <p><b>{{ faq.id }}-{{ faq.pregunta }}</b></p>
-	    <p> {{ faq.respuesta }} </p>
-            <p>{{ faq.estudiante.nombre }}{{ faq.estudiante.apellido }}({{ faq.estudiante.fechareg}})</p>
-	  {% endfor %}
-{% endblock %}
+        <div class="preguntas">
+            <p><b>{{ faq.id }}-{{ faq.pregunta }}</b></p>
+	    </div>
 
+	    <div class="respuestas">
+	    	<p> {{ faq.respuesta }} </p>
+	    </div>
+
+	    <div class="redactor">
+	        <p>{{ faq.estudiante.nombre }}{{ faq.estudiante.apellido }}({{ faq.estudiante.fechareg}})</p>
+	        <div class="votos">
+	         UP: 10  ::star::
+	        </div>
+	    </div>
+	        {% endif %}
+	    </div>
+	        {% endfor %}
+{% endblock %}
