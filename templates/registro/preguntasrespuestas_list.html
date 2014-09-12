@@ -8,9 +8,10 @@
 
 {% for faq in preguntasresp%}
    {% if faq.estudiante.status %}
-    <div class="wrapper">
+    <article class="faq">
         <div class="preguntas">
             <p><b>{{ faq.id }}-{{ faq.pregunta }}</b></p>
+            <div class="iconitoheart2"></div>
 	    </div>
 
 	    <div class="respuestas">
@@ -18,12 +19,14 @@
 	    </div>
 
 	    <div class="redactor">
-	        <p>{{ faq.estudiante.nombre }}{{ faq.estudiante.apellido }}({{ faq.estudiante.fechareg}})</p>
+	        <p>{{ faq.estudiante.nombre }}{{ faq.estudiante.apellido }}({{ faq.estudiante.fechareg }})</p>
 	        <div class="votos">
-	         UP: 10  ::star::
+	        	<div><a href="#" class="iconitothumbs-up up"></a></div>
+	        	<div class="point">10</div>
+	        	<div><a href="#" class="iconitothumbs-up2 down"></a></div>
+	         </div>
 	        </div>
-	    </div>
 	        {% endif %}
-	    </div>
+	    </article>
 	        {% endfor %}
 {% endblock %}

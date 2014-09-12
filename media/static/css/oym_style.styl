@@ -1,4 +1,6 @@
-blue = 22BCE0
+@import "../icon/icons.css"
+
+blue = #22BCE0
 dark_blue = #444
 dark_grey = #78787A
 
@@ -30,7 +32,7 @@ body
 .panel-principal
 	background #E0FFC2
 	box-shadow 2px 2px 10px rgba(black, 0.5)
-	margin: 0 0 0 20px
+	margin: 0 5px 0 10px
 	padding: 0 0 0 20px
 	width: 98.8%
 	
@@ -137,17 +139,18 @@ body
 				padding: 5px
 
 			.poster-networking
-				  background: orange
+				  background: #FF3300
 				  box-shadow 6px 4px 20px rgba(black, 0.5)
 				  color: white
 				  margin: 0
+				  overflow: hidden
 				  padding: 65px
 				  text-align: center
 
 				  &:hover
 				  	background: red
-				  	border-radius 0.5em
-				  	color black
+				  	border-radius: 0.5em
+				  	color: black
 				  	cursor: pointer
 				  	transform: scale(1.1)
 			
@@ -156,26 +159,28 @@ body
 				  box-shadow 6px 4px 20px rgba(black, 0.5)
 				  color: white
 				  margin: 0
+				  overflow: hidden
 				  padding: 46px
 				  text-align: center
 
 				  &:hover
-				  	background: red
+				  	background: #0000FF
 				  	border-radius 0.5em
 				  	color black
 				  	cursor: pointer
 				  	transform: scale(1.1)
 
 	    .poster-vm
-		         background: green
+		         background: #009900
 		         box-shadow 6px 4px 20px rgba(black, 0.5)
 		         color white
 		         margin: 0
+		         overflow: hidden
 		         padding: 66px 23px
 		         text-align: center
 
 		         &:hover
-		         	background: red
+		         	background: green
 		         	border-radius 0.5em
 		         	color black
 		         	cursor: pointer
@@ -228,7 +233,7 @@ body
 			 	text-decoration: none
 
 			 	&:hover
-			 		color yellow
+			 		color #FFFF00
 			 i
 			 	padding: 0.1em
 			 
@@ -248,7 +253,9 @@ body
 		background #22BCE0
 		box-shadow 2px 2px 10px rgba(black, 0.5)
 		height: 200px
-		margin: 0 0 0 18px
+		margin: 0 5px 0 9.5px 
+		padding 0
+
 		width: 98.9%
 
 		img
@@ -267,34 +274,76 @@ body
       text-shadow: 6px 6px 10px rgba(black, 0.8)
 
 .title		
-	font-family Arial
+	font-family "Nunito", Arial
 	font-size 28px
 	font-style italic
 	font-weight bold
 	text-align center
 	text-shadow 2px 2px 6px rgba(black, 1)
 
-.wrapper
-	background #A3FF75
-	text-align left
+.faq
+	background #66CCFF
 	border 2px solid #DDD
 	border-radius 0.5em
+	box-shadow 2px 2px 6px rgba(black, 0.5)
 	margin 0 20px 10px 20px
 	padding 0
+	text-align left
+
+	&:hover 
+		background #00CCFF
+		box-shadow 2px 2px 6px 4px rgba(red, 1)
 
 
 	.preguntas
-		font-family Arial
+		font-family "Nunito", time
 		font-size 26px
 		font-weight bold
-	
+
+		.iconitoheart2
+			color #990000
+			display inline-block
+			float right
+			margin 15px	
+
+		.iconitoheart2:hover:before
+			color hotpink
+			content "\e600"
+
+
 	.respuestas
-		font-family Arial
-		font-size 20px
+		font-family "Open Sans", Arial
+		font-size 24px
+		margin 0 40px
 
 	.redactor
-		color red
-		font-family Arial
-		font-size 16px
+		color #000066
+		font-family: 'Rancho', cursive;
+		font-size 15px
 		font-weight bold
 		text-decoration underline
+		margin 0 40px
+
+		.votos
+			text-align center
+			margin 0 -40px
+			width 2%
+			
+			a
+			  font-size 20px
+			  text-decoration none
+
+			a:hover
+			 	font-size 2.3em
+			 	transition all 1s ease
+
+			.down 
+				color #FF3300
+
+			.point
+				color black
+
+			.up 
+				color #000066
+
+
