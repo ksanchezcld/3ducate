@@ -1,35 +1,39 @@
-{% extends "listado.html" %}
+{% extends "home/base.html" %}
+{% block title %}::..Sistema Universidad OYM.::{% endblock %}
+{% block content %}
 
-{% block contenido %}
+<div class="title">
+	 <h1>Listado Enlaces</h1>
+</div>
 
-    <div id="contenedor" class="wrapper">
-    	<div id="nos">
-        <h1>Listado Enlaces</h1>
-        <h2>Sistemas Operativos</h2>
-          {% for link in object_list%}
-            <div id="nos">
+    <div id="contenedor" class="title">
+    	<div class="preguntas">
+       		<h2>Sistemas Operativos</h2>
+
+          		{% for link in object_list%}
+            <div id="nos" class="preguntas">
 	          <b><p>{{ link.titulo_nos }}</p><b>
 	          <a href="{{ link.nos }}" target="_blank">{{ link.nos }}</a></b><p>
 	     {% endfor %}
 	</div>
 	     
 
-	<div id="vm">
-	  <h2>Virtualizacion</h2>
-	    {% for link in object_list%}
-		  <b><p>{{ link.titulo_virtualizacion }}</p><b>
-		  <a href="{{ link.virtualizacion }}" target="_blank">{{ link.virtualizacion }}</a></b><p>
-        {% endfor %}
-	</div>
-	     
-	     
-	      <div id="network">
-	        <h2>Redes</h2>
-	          {% for link in object_list%}
-			     <b><p>{{ link.titulo_redes }}</p><b>
-			     <a href="{{ link.redes }}" target="_blank">{{ link.redes }}</a></b><p>
-			  {% endfor %}
-		  </div>
+		<div id="vm" class="preguntas">
+		  <h2>Virtualizacion</h2>
+		    {% for link in object_list%}
+			  <b><p>{{ link.titulo_virtualizacion }}</p><b>
+			  <a href="{{ link.virtualizacion }}" target="_blank">{{ link.virtualizacion }}</a></b><p>
+	        {% endfor %}
+		</div>
+		     
+		     
+		      <div id="network">
+		        <h2>Redes</h2>
+		          {% for link in object_list%}
+				     <b><p>{{ link.titulo_redes }}</p><b>
+				     <a href="{{ link.redes }}" target="_blank">{{ link.redes }}</a></b><p>
+				  {% endfor %}
+			  </div>
 	  </div>
 
 {% endblock %}

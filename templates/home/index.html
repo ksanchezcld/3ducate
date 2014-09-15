@@ -1,13 +1,13 @@
-{% extends 'home/base.html' %}
+{% extends "home/base.html" %}
 {% block title %}::..Sistema Universidad OYM.::{% endblock %}
 
 {% block content %}
 
-	<div class="title">
-		{% for materia in materia %}
-			<h2>{{materia.name}}</h2>
+<div class="title">
+	{% for materia in materia %}
+		<h2>{{materia.name}}</h2>
     {% endfor %}
-	</div>
+</div>
 
 	<div class="panel-principal">
 		<div class="panel-izquierdo">
